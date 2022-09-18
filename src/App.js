@@ -1,23 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import Information from './component/Information/Information';
 
 function App() {
+  const data=[{
+    name:"Zahid",
+    email:"zahidhasanjos90@gmail.com",
+    number:"01785478384"
+    },
+    {
+      name:"Joy",
+      email:"sohanur@gmail.com",
+      number:"01743698155"
+      },
+      {
+        name:"Emon",
+        email:"arobiemon@gmail.com",
+        number:"01768445468"
+        },
+        {
+          name:"Sanoar",
+          email:"sanoar180@gmail.com",
+          number:"01685478384"
+          }]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     {data.map((singleData, index)=><Information key={index} singleData={singleData} ></Information>)}
     </div>
   );
 }
